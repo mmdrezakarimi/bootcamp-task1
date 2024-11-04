@@ -1,0 +1,188 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+/* Root */
+:root {
+  --color-primary: rgba(33, 159, 149, 1);
+  --color-secondary: rgba(35, 72, 148, 1);
+  --color-secondary-light: rgba(175, 206, 221, 1);
+  --fontColor-primary: rgba(30, 30, 30, 1);
+  --fontColor-secondar: rgba(105, 105, 105, 1);
+  --color-white: rgba(255, 255, 255, 1);
+}
+html {
+  font-size: 62.5%;
+  font-family: "Iransans";
+}
+
+h1 {
+  margin: 1.5rem;
+}
+
+/* Button */
+.btn {
+  cursor: pointer;
+  width: 15rem;
+  height: 6.5rem;
+  border-radius: 0.8rem;
+  outline: 0;
+  font-size: 1.2rem;
+  font-family: "Iransans";
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  border: 0.2rem solid var(--color-primary);
+}
+/* Current Requests */
+.watching {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+.requests {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  margin: 1rem;
+}
+.requestsBoxes {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 40rem;
+  height: 20rem;
+}
+
+.requestBoxInfo {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.requestBoxItems {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+.requestBoxInfo .requestNumber {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--color-secondary);
+}
+
+.requestNumberBox {
+  width: 4rem;
+  height: 4rem;
+  background-color: var(--color-secondary-light);
+  border-radius: 0.6rem;
+  font-size: 2rem;
+  padding: 0.8rem 1.3rem;
+}
+.userprofile {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 0.5rem;
+}
+.userprofile img {
+  border-radius: 0.6rem;
+}
+@media screen and (max-width: 350px) {
+  .btn{
+    width: 10rem;
+    height: 4rem;
+    font-size: smaller;
+  }
+  .requestsBoxes{
+    width: 25rem;
+  }
+  .requestBoxItems {
+    margin-left: 1.5rem;
+  }
+  
+  .requestBoxInfo .requestNumber {
+    align-items: center;
+    color: var(--color-secondary);
+  }
+  .requestNumberBox {
+    width: 1.5rem;
+    height: 2rem;
+    background-color: var(--color-secondary-light);
+    border-radius: 0.6rem;
+    font-size: 1rem;
+    padding: 0.4rem 0.4rem;
+  }
+  .userprofile {
+    gap: 0.2rem;
+  }
+  .userprofile img {
+    border-radius: 10rem;
+  }
+  .watching {
+    justify-content: center;
+    align-items: center;
+  }
+  .requests {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    margin-right: 1rem;
+    row-gap: 1rem;
+  }
+}
+
+ @media screen and (min-width: 350px) and (max-width: 450px) {
+  .btn{
+    width: 5rem;
+    height: 2rem;
+    font-size: 0.5rem;
+    margin-bottom: 0.8rem;
+  }
+  .requestsBoxes{
+    width: 18rem;
+  }
+
+  .requestBoxInfo .requestNumber {
+    align-items: center;
+  }
+  .requestBoxInfo {
+    font-size: smaller;
+  }
+  .requestNumberBox {
+    width: 1.8rem;
+    height: 2rem;
+    font-size: 1.2rem;
+    padding: 0.4rem 0.6rem;
+  }
+  .userprofile {
+    gap: 0.3rem;
+  }
+  .userprofile img {
+    border-radius: 10rem;
+  }
+  .watching {
+    justify-content: center;
+    align-items: center;
+  }
+  .requests {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin-right: 1rem;
+    row-gap: 1rem;
+  }
+}
+
+/*@media screen and (min-width: 450px) and (max-width: 768px) {
+}
+
+@media screen and (min-width: 1280px) and (max-width: 1535px) {
+}
+
+@media screen and (min-width: 1536px) {
+} */

@@ -1,0 +1,170 @@
+/* Reset */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* Variables */
+:root {
+  --color-primary: #219f95;
+  --color-secondary: #234894;
+  --color-secondary-light: #afcedd;
+  --fontColor-primary: #1e1e1e;
+  --fontColor-secondary: #696969;
+  --color-white: #ffffff;
+}
+
+/* Base */
+html {
+  font-size: 62.5%;
+  font-family: "Iransans";
+}
+
+h1 {
+  margin: 1.5rem;
+}
+
+.dropbox {
+  display: none;
+}
+
+/* Button */
+.btn {
+  cursor: pointer;
+  width: 15rem;
+  height: 6.5rem;
+  border-radius: 0.8rem;
+  outline: none;
+  font-size: 1.2rem;
+  font-family: "Iransans";
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  border: 0.2rem solid var(--color-primary);
+}
+
+/* Layouts */
+.watching,
+.requestBoxInfo,
+.requestBoxItems {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.watching {
+  align-items: flex-start;
+}
+
+.requests {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  margin: 1rem;
+}
+
+.requestsBoxes,
+.requestBoxInfo,
+.requestBoxItems {
+  width: 40rem;
+  height: 20rem;
+}
+
+.requestBoxInfo .requestNumber,
+.userprofile {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.requestBoxInfo .requestNumber {
+  justify-content: space-around;
+  color: var(--color-secondary);
+}
+
+.requestNumberBox {
+  width: 4rem;
+  height: 4rem;
+  background-color: var(--color-secondary-light);
+  border-radius: 0.6rem;
+  font-size: 2rem;
+  padding: 0.8rem 1.3rem;
+}
+
+.userprofile img {
+  border-radius: 0.6rem;
+}
+
+/* Media Queries */
+@media screen and (max-width: 350px) {
+  .btn {
+    width: 10rem;
+    height: 4rem;
+    font-size: smaller;
+  }
+  .requestsBoxes {
+    width: 25rem;
+  }
+  .requestBoxItems {
+    margin-left: 1.5rem;
+  }
+  .requestNumberBox {
+    width: 1.5rem;
+    height: 2rem;
+    font-size: 1rem;
+    padding: 0.4rem;
+  }
+  .userprofile {
+    gap: 0.2rem;
+  }
+  .userprofile img {
+    border-radius: 10rem;
+  }
+  .watching,
+  .requests {
+    justify-content: center;
+    align-items: center;
+  }
+  .requests {
+    grid-template-columns: 1fr;
+    margin-right: 1rem;
+    row-gap: 1rem;
+  }
+}
+
+@media screen and (min-width: 350px) and (max-width: 450px) {
+  .btn {
+    width: 5rem;
+    height: 2rem;
+    font-size: 0.5rem;
+    margin-bottom: 0.8rem;
+  }
+  .requestsBoxes {
+    width: 18rem;
+  }
+  .requestNumberBox {
+    width: 1.8rem;
+    height: 2rem;
+    font-size: 1.2rem;
+    padding: 0.4rem 0.6rem;
+  }
+  .userprofile {
+    gap: 0.3rem;
+  }
+  .userprofile img {
+    border-radius: 10rem;
+  }
+  .watching,
+  .requests {
+    justify-content: center;
+    align-items: center;
+  }
+  .requests {
+    grid-template-columns: repeat(2, 1fr);
+    margin-right: 1rem;
+    row-gap: 1rem;
+  }
+}

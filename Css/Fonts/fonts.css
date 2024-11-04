@@ -1,0 +1,9 @@
+@font-face {
+    font-family: "Iransans";
+    font-style: normal;
+    src: url(./Iranian\ Sans.woff) format("woff");
+}
+html,
+body{
+    font-family: "Iransans";
+}
